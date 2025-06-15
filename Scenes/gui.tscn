@@ -13,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="ColorRect" parent="GameOverMenu"]
+[node name="GameOverMenuBackground" type="ColorRect" parent="GameOverMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.118581, 0.118581, 0.118581, 1)
 
-[node name="Label" type="Label" parent="GameOverMenu"]
+[node name="GameOverMenuLabel" type="Label" parent="GameOverMenu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
