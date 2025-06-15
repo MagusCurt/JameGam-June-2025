@@ -45,12 +45,12 @@ radius = 7.0
 [node name="Player" type="Node2D"]
 script = ExtResource("1_v0iea")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="PlayerBody2D" type="CharacterBody2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerBody2D"]
 sprite_frames = SubResource("SpriteFrames_3smsa")
 animation = &"Idle"
-frame_progress = 0.61631
+frame_progress = 0.0946899
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody2D"]
 shape = SubResource("CircleShape2D_cvnsp")

@@ -13,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="ColorRect" parent="GameOverMenu"]
+[node name="GameOverMenuBackground" type="ColorRect" parent="GameOverMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.118581, 0.118581, 0.118581, 1)
 
-[node name="Label" type="Label" parent="GameOverMenu"]
+[node name="GameOverMenuLabel" type="Label" parent="GameOverMenu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,3 +37,37 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3, 3)
 text = "Game Over"
+
+[node name="TitleScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleScreenBackground" type="ColorRect" parent="TitleScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0836, 0.194993, 0.22, 1)
+
+[node name="TitleScreenLabel" type="Label" parent="TitleScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -11.5
+offset_right = 42.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(42, 11.5)
+text = "Game Title"
