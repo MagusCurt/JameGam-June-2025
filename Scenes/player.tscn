@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bl7fq0xlv0g30"]
+[gd_scene load_steps=12 format=3 uid="uid://bl7fq0xlv0g30"]
 
 [ext_resource type="Script" uid="uid://g53u147ofx0c" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://d1j18kmkxg8uw" path="res://Scenes/player_body_2d.gd" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://2q6uncp72df" path="res://Assets/BaseBody-Sheet-Sheet.png" id="2_cvnsp"]
-[ext_resource type="Script" uid="uid://dox4a3wre5qdb" path="res://Scenes/test_spout_mechanic.gd" id="4_vgqql"]
+[ext_resource type="Texture2D" uid="uid://n2iche8bdk0g" path="res://Assets/water.png" id="4_vgqql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -44,6 +44,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
 radius = 7.0
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fkybt"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+linear_accel_min = 45.37
+linear_accel_max = 100.0
+radial_accel_min = 48.45
+radial_accel_max = 100.0
+
 [node name="Player" type="Node2D"]
 script = ExtResource("1_v0iea")
 
@@ -58,5 +66,11 @@ frame_progress = 0.0946899
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody2D"]
 shape = SubResource("CircleShape2D_cvnsp")
 
-[node name="TestSpoutMechanic" type="Node2D" parent="PlayerBody2D"]
-script = ExtResource("4_vgqql")
+[node name="GPUParticles2D" type="GPUParticles2D" parent="PlayerBody2D"]
+position = Vector2(0, 9)
+scale = Vector2(0.1, 0.1)
+emitting = false
+amount = 30
+texture = ExtResource("4_vgqql")
+preprocess = 1.52
+process_material = SubResource("ParticleProcessMaterial_fkybt")
